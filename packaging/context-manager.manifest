@@ -1,0 +1,16 @@
+<manifest>
+	<define>
+		<domain name="context-manager"/>
+		<permit>
+			<smack permit="dbus" type="rwx"/>
+			<smack permit="system::vconf" type="rwxat"/>
+			<smack permit="deviced::display" type="rw"/>
+		</permit>
+	</define>
+	<request>
+		<domain name="context-manager" />
+	</request>
+	<assign>
+		<filesystem path="/usr/bin/contextd" exec_label="context-manager" label="context-manager"/>
+	</assign>
+</manifest>

@@ -1,0 +1,13 @@
+[Unit]
+Description=Context Manager Daemon
+After=default.target
+
+[Service]
+Type=dbus
+BusName=org.tizen.sensor.context
+ExecStart=/usr/bin/contextd
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=graphical.target
