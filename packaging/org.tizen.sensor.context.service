@@ -1,5 +1,0 @@
-[D-BUS Service]
-Name=org.tizen.sensor.context
-Exec=/bin/false
-SystemdService=context-manager.service
-User=root
